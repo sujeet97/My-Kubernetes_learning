@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: LoadBalancer
+  ports: 
+   - targetPort: 80
+     port: 80
+     NodePort: 30002
+  selector:                
+    app: myapp
+    type: frontend            //Label field attribute of Pod definition.  

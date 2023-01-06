@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp           // Name of the Pod
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp       // Name of the container which you wnat to Name
+    image: <Image>   // Name of the docker Image
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
